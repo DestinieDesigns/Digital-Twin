@@ -13,7 +13,35 @@
     />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Shown only when the app bundle does not load (for example on github.io,
+           which serves this source file directly and cannot run the Bun API).
+           React replaces this on mount. -->
+      <div
+        style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px;background:#fbf7f0;color:#23201c;font-family:ui-sans-serif,'Segoe UI',system-ui,-apple-system,sans-serif"
+      >
+        <div style="max-width:620px;border:1px solid #e5dac8;border-radius:16px;background:#fffdf9;padding:34px 32px;box-shadow:0 10px 30px -18px rgba(35,32,28,0.35)">
+          <p style="margin:0 0 10px;font-size:9.5px;letter-spacing:0.3em;text-transform:uppercase;color:#b99253;font-weight:600">
+            Destinie AI Twin Studio
+          </p>
+          <h1 style="margin:0 0 12px;font-family:Georgia,'Times New Roman',serif;font-size:30px;font-weight:500;line-height:1.15;color:#17150f">
+            This is the source repository, not the running studio.
+          </h1>
+          <p style="margin:0 0 16px;font-size:13.5px;line-height:1.7;color:#7b7264">
+            GitHub is showing the project's <code>index.html</code>. The studio is a local app: it needs the Bun API and a
+            SQLite database on your own computer, so it cannot run on GitHub Pages, and no private media is ever uploaded
+            to a hosted site. Run it locally and open <strong style="color:#23201c">http://127.0.0.1:5173</strong>.
+          </p>
+          <pre style="margin:0 0 16px;padding:14px;border:1px solid #e5dac8;border-radius:10px;background:#f7f1e5;font-family:ui-monospace,Consolas,monospace;font-size:12px;line-height:1.7;white-space:pre-wrap;color:#4a443b">bun install
+bun run setup
+bun run dev</pre>
+          <p style="margin:0;font-size:12px;line-height:1.65;color:#7b7264">
+            Full instructions:
+            <a href="https://github.com/DestinieDesigns/Digital-Twin#setup-and-run" style="color:#b99253">README → Setup and run</a>
+          </p>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
